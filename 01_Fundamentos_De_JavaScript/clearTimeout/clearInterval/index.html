@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Set Interval</title>
+</head>
+<body>
+    <h1 id="timer">Han pasado 0 segundos</h1>
+    <button id ="cancel-button">cancel</button>
+    <script>
+        //setInterval(que voy a a hacer, cada cuanto tiempo debo de hacerlo)
+        const timer = document.getElementById("timer");
+        const $cancelButton = document.getElementById("cancel-button");
+        let counter = 0;
+        const interval = setInterval(()=>{
+            counter++;
+            timer.textContent = `Ha pasado ${counter} segundos.`;
+            if(counter==1){
+                timer.textContent = `Ha pasado ${counter} segundo.`;
+            }
+            if(counter==0 || counter>1){
+                timer.textContent = `Han pasado ${counter} segundos.`;
+            }
+        }, 1000);
+
+        $cancelButton.addEventListener('click', ()=>{
+            clearInterval(interval);
+        } );
+
+        
+        
+    </script>
+</body>
+</html>

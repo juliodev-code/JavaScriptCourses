@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Callbacks</title>
+</head>
+<body>
+    <h1 id="agenda">Estoy despertando</h1>
+
+    <script>
+        const DESPERTAR = 3000;
+        const DUCHA = 2000;
+        const VERSTIRSE = 2000;
+        const DESAYUNAR = 3000;
+        const PLATZI = 5000;
+        const $agenda = document.getElementById("agenda");
+        setTimeout(()=>{
+            $agenda.textContent = 'Ahora me estoy bañando';
+            setTimeout(()=>{
+                $agenda.textContent = 'Ahora me estoy vistiendo';
+                setTimeout(()=>{
+                    $agenda.textContent = 'Ahora me estoy desayunando';
+                    setTimeout(()=>{
+                        $agenda.textContent = 'Estoy en PLatzi';
+                        setTimeout(()=>{
+                            $agenda.textContent = 'Codifico..';
+                        }, PLATZI);
+                    }, DESAYUNAR);
+                }, VERSTIRSE);
+            }, DUCHA);
+        }, DESPERTAR);
+    </script>
+</body>
+</html>

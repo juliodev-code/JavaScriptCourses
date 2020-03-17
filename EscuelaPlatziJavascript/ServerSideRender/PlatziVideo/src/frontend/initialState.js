@@ -1,5 +1,5 @@
 export default {
-    'user': {},
+  'user': {},
   'playing': {},
   'myList': [],
   'trends': [
@@ -162,4 +162,4 @@ export default {
       'source': 'https://mdstrm.com/video/58333e214ad055d208427db5.mp4',
     },
   ],
-}
+};
